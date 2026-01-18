@@ -1,4 +1,4 @@
-import { Globe, ChevronDown } from "lucide-react";
+import { Globe, ChevronDown, LayoutDashboard, ClipboardList, FileText, GraduationCap, Briefcase, User, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,14 +7,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+interface NavItem {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+  active?: boolean;
+  hasDropdown?: boolean;
+}
+
 const Navbar = () => {
-  const navItems = [
-    { label: "Dashboard", href: "#", active: true },
-    { label: "Applications", href: "#" },
-    { label: "Resume & Cover Letter", href: "#", hasDropdown: true },
-    { label: "Career Coach", href: "#" },
-    { label: "Job Board", href: "#" },
-    { label: "Profile", href: "#" },
+  const navItems: NavItem[] = [
+    { label: "Dashboard", href: "#", icon: LayoutDashboard, active: true },
+    { label: "Applications", href: "#", icon: ClipboardList },
+    { label: "Resume & Cover Letter", href: "#", icon: FileText, hasDropdown: true },
+    { label: "Career Coach", href: "#", icon: GraduationCap },
+    { label: "Job Board", href: "#", icon: Briefcase },
+    { label: "Profile", href: "#", icon: User },
   ];
 
   return (
@@ -30,20 +38,24 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-1">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                item.active
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-              } ${item.hasDropdown ? "flex items-center gap-1" : ""}`}
-            >
-              {item.label}
-              {item.hasDropdown && <ChevronDown className="h-4 w-4" />}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
+                  item.active
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                <IconComponent className="h-4 w-4" />
+                {item.label}
+                {item.hasDropdown && <ChevronDown className="h-4 w-4" />}
+              </a>
+            );
+          })}
         </div>
 
         {/* Language Selector */}
