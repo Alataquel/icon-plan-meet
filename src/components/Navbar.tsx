@@ -37,22 +37,22 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-2">
           {navItems.map((item) => {
             const IconComponent = item.icon;
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
+                title={item.label}
+                className={`p-2.5 rounded-lg transition-colors flex items-center gap-1 ${
                   item.active
-                    ? "text-primary border-b-2 border-primary"
+                    ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                 }`}
               >
-                <IconComponent className="h-4 w-4" />
-                {item.label}
-                {item.hasDropdown && <ChevronDown className="h-4 w-4" />}
+                <IconComponent className="h-5 w-5" />
+                {item.hasDropdown && <ChevronDown className="h-3 w-3" />}
               </a>
             );
           })}
