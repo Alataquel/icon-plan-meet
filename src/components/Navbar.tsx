@@ -1,4 +1,4 @@
-import { Globe, ChevronDown, LayoutDashboard, ClipboardList, FileText, GraduationCap, Briefcase, User, LucideIcon } from "lucide-react";
+import { Globe, ChevronDown, LayoutDashboard, ClipboardList, FileText, GraduationCap, Briefcase, User, Calendar, Video, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -22,6 +22,8 @@ const Navbar = () => {
     { label: "Resume & Cover Letter", href: "#", icon: FileText, hasDropdown: true },
     { label: "Career Coach", href: "#", icon: GraduationCap },
     { label: "Job Board", href: "#", icon: Briefcase },
+    { label: "Events", href: "#", icon: Calendar },
+    { label: "Book a Meeting", href: "#", icon: Video },
     { label: "Profile", href: "#", icon: User },
   ];
 
@@ -36,8 +38,10 @@ const Navbar = () => {
           <span className="text-foreground font-semibold text-lg">Student Portal</span>
         </div>
 
+        {/* Spacer */}
+        <div className="flex-1" />
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-4 mr-4">
           {navItems.map((item) => {
             const IconComponent = item.icon;
             return (
