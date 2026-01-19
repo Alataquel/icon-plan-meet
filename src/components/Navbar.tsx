@@ -1,4 +1,4 @@
-import { Globe, ChevronDown, LayoutDashboard, ClipboardList, FileText, GraduationCap, Briefcase, User, Calendar, Video, LucideIcon, ArrowRight } from "lucide-react";
+import { Globe, ChevronDown, LayoutDashboard, ClipboardList, FileText, GraduationCap, Briefcase, User, Calendar, Video, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -33,17 +33,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-background/80 backdrop-blur-md border-b border-border/50 px-6 py-4 sticky top-0 z-50">
+    <nav className="bg-card border-b border-border px-6 py-3">
       <div className="max-w-7xl mx-auto flex items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <span className="text-primary font-bold text-xl">apply</span>
-          <span className="text-foreground font-bold text-xl">lab</span>
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-lg">a</span>
+          </div>
+          <span className="text-foreground font-semibold text-lg">Student Portal</span>
         </div>
 
         {/* Navigation Links - Centered */}
         <div className="flex-1 flex justify-center">
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-4">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
@@ -70,30 +72,21 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Right side actions */}
-        <div className="flex items-center gap-4">
-          {/* Language Selector */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground hover:text-foreground">
-                <Globe className="h-4 w-4" />
-                <span className="hidden sm:inline">English</span>
-                <ChevronDown className="h-3 w-3" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>English</DropdownMenuItem>
-              <DropdownMenuItem>Français</DropdownMenuItem>
-              <DropdownMenuItem>Español</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* CTA Button */}
-          <Button className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 rounded-full px-5">
-            Get Started
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
+        {/* Language Selector */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="gap-2">
+              <Globe className="h-4 w-4" />
+              English
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem>English</DropdownMenuItem>
+            <DropdownMenuItem>Français</DropdownMenuItem>
+            <DropdownMenuItem>Español</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </nav>
   );

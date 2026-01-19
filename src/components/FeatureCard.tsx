@@ -19,18 +19,18 @@ const FeatureCard = ({
   return (
     <div
       onClick={onClick}
-      className="relative bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer border border-border/50 group hover:border-primary/30 window-dots"
+      className="relative bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer border border-border group"
     >
       {comingSoon && (
         <Badge
           variant="secondary"
-          className="absolute top-4 right-4 text-xs bg-accent/20 text-accent border-0"
+          className="absolute top-4 right-4 text-xs bg-secondary text-muted-foreground"
         >
           Coming Soon
         </Badge>
       )}
-      <div className="flex items-start gap-4 pt-6">
-        <div className="p-3 rounded-xl bg-secondary/50 group-hover:bg-primary/20 transition-colors">
+      <div className="flex items-start gap-4">
+        <div className="p-3 rounded-xl bg-secondary group-hover:bg-primary/10 transition-colors">
           <Icon className="h-6 w-6 text-primary" />
         </div>
         <div className="flex-1">
