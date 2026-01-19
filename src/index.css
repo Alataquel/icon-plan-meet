@@ -8,105 +8,107 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 40% 98%;
-    --foreground: 224 71% 20%;
+    /* Dark blue theme as default */
+    --background: 220 60% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 20%;
+    --card: 220 50% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 20%;
+    --popover: 220 50% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 224 71% 35%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 30% 96%;
-    --secondary-foreground: 224 71% 20%;
+    --secondary: 220 40% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 20% 96%;
-    --muted-foreground: 220 15% 50%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 224 71% 35%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 70% 45%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 90%;
-    --input: 220 20% 90%;
-    --ring: 224 71% 35%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 199 89% 48%;
 
     --radius: 0.75rem;
 
     /* Custom colors */
     --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
+    --success-foreground: 210 40% 98%;
     --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    --warning-foreground: 210 40% 98%;
     --info: 199 89% 48%;
-    --info-foreground: 0 0% 100%;
+    --info-foreground: 210 40% 98%;
 
     /* Status colors */
     --status-applied: 142 76% 36%;
-    --status-interview: 224 71% 35%;
+    --status-interview: 199 89% 48%;
     --status-second-round: 38 92% 50%;
     --status-offer: 142 76% 36%;
 
-    /* Gradient backgrounds */
-    --gradient-hero: linear-gradient(135deg, hsl(220 40% 98%) 0%, hsl(220 50% 95%) 50%, hsl(220 40% 98%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 30% 99%) 100%);
+    /* Gradient colors */
+    --gradient-start: 199 89% 48%;
+    --gradient-end: 142 70% 45%;
 
     /* Shadows */
-    --shadow-card: 0 4px 20px -4px hsl(224 71% 20% / 0.08);
-    --shadow-hover: 0 8px 30px -6px hsl(224 71% 20% / 0.12);
+    --shadow-card: 0 4px 20px -4px hsl(220 60% 4% / 0.5);
+    --shadow-hover: 0 8px 30px -6px hsl(220 60% 4% / 0.7);
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 224 71% 20%;
-    --sidebar-primary: 224 71% 35%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 30% 96%;
-    --sidebar-accent-foreground: 224 71% 20%;
-    --sidebar-border: 220 20% 90%;
-    --sidebar-ring: 224 71% 35%;
+    --sidebar-background: 220 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 40% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 199 89% 48%;
   }
 
   .dark {
-    --background: 224 71% 8%;
-    --foreground: 220 30% 96%;
+    /* Same as root since we're using dark theme by default */
+    --background: 220 60% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 224 50% 12%;
-    --card-foreground: 220 30% 96%;
+    --card: 220 50% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 224 50% 12%;
-    --popover-foreground: 220 30% 96%;
+    --popover: 220 50% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 224 71% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 224 40% 18%;
-    --secondary-foreground: 220 30% 96%;
+    --secondary: 220 40% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 224 40% 18%;
-    --muted-foreground: 220 15% 60%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 224 71% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 70% 45%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 224 40% 18%;
-    --input: 224 40% 18%;
-    --ring: 224 71% 55%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 199 89% 48%;
 
-    --sidebar-background: 224 50% 10%;
-    --sidebar-foreground: 220 30% 96%;
-    --sidebar-primary: 224 71% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 224 40% 18%;
-    --sidebar-accent-foreground: 220 30% 96%;
-    --sidebar-border: 224 40% 18%;
-    --sidebar-ring: 224 71% 55%;
+    --sidebar-background: 220 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 40% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 199 89% 48%;
   }
 }
 
@@ -119,4 +121,38 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: inherit;
   }
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle star background effect */
+.stars-bg {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, hsl(210 40% 40% / 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, hsl(210 40% 50% / 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, hsl(210 40% 60% / 0.3), transparent),
+    radial-gradient(2px 2px at 130px 80px, hsl(210 40% 40% / 0.2), transparent),
+    radial-gradient(1px 1px at 160px 30px, hsl(210 40% 50% / 0.3), transparent);
+  background-size: 200px 100px;
+}
+
+/* Window dots styling */
+.window-dots::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  background: hsl(0 70% 50%);
+  border-radius: 50%;
+  box-shadow: 
+    18px 0 0 hsl(45 90% 50%),
+    36px 0 0 hsl(142 70% 45%);
 }
