@@ -1,4 +1,4 @@
-import { User, Building2, Mail, Calendar, Video } from "lucide-react";
+import { User, Building2, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import WelcomeSection from "@/components/WelcomeSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -24,16 +24,6 @@ const Index = () => {
       description: "Connect your email for automatic application tracking",
       comingSoon: true,
     },
-    {
-      icon: Calendar,
-      title: "Upcoming Events",
-      description: "Discover workshops, career fairs, and networking events",
-    },
-    {
-      icon: Video,
-      title: "Book a Meeting",
-      description: "Schedule one-on-one sessions with career advisors",
-    },
   ];
 
   return (
@@ -52,26 +42,14 @@ const Index = () => {
         <WelcomeSection />
         
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {features.slice(0, 3).map((feature) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          {features.map((feature) => (
             <FeatureCard
               key={feature.title}
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
               comingSoon={feature.comingSoon}
-            />
-          ))}
-        </div>
-        
-        {/* Additional Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {features.slice(3).map((feature) => (
-            <FeatureCard
-              key={feature.title}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
             />
           ))}
         </div>
